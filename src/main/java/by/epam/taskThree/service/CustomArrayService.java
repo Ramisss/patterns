@@ -31,8 +31,8 @@ public class CustomArrayService {
     }
 
 
-    public int findSum(int[] arr) {
-        int sum = 0;
+    public double findSum(double[] arr) {
+        double sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
@@ -40,9 +40,9 @@ public class CustomArrayService {
         return sum;
     }
 
-    public int findAvg(int[] arr) {
-        int sum = findSum(arr);
-        int avg = sum / arr.length;
+    public double findAvg(double[] arr) {
+        double sum = findSum(arr);
+        double avg = sum / arr.length;
         return avg;
     }
 

@@ -28,8 +28,6 @@ public class SortingArray {
                 array[j+1] = array[j];
                 j--;
             }
-            // at this point we've exited, so j is either -1
-            // or it's at the first element where current >= a[j]
             array[j+1] = current;
         }
     }
