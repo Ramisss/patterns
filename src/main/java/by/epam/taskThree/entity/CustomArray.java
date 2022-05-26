@@ -5,12 +5,7 @@ import java.util.Arrays;
 public class CustomArray {
 
     private int[] massive;
-    private String name;
-
-    public CustomArray(int[] customArray, String name) {
-        this.massive = customArray;
-        this.name = name;
-    }
+    private int  id;
 
     @Override
     public boolean equals(Object o) {
@@ -19,14 +14,14 @@ public class CustomArray {
 
         CustomArray that = (CustomArray) o;
 
-        if (!Arrays.equals(massive, that.massive)) return false;
-        return name != null ? name.equals(that.name) : that.name == null;
+        if (id != that.id) return false;
+        return Arrays.equals(massive, that.massive);
     }
 
     @Override
     public int hashCode() {
         int result = Arrays.hashCode(massive);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + id;
         return result;
     }
 
@@ -38,11 +33,16 @@ public class CustomArray {
         this.massive = massive;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public CustomArray(int[] massive, int id) {
+        this.massive = massive;
+        this.id = id;
     }
 }

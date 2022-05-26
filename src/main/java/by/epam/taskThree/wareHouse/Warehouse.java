@@ -13,5 +13,14 @@ public class Warehouse {
         return WAREHOUSE;
     }
 
+    public CustomArray addCustomArray(CustomArray customArray, int id){
+        return customArrayHashMap.put(id,customArray);
+    }
+
+    public CustomArray getCustomArray(int id) {
+        return customArrayHashMap.get(id);
+    }
+
+
 
 }

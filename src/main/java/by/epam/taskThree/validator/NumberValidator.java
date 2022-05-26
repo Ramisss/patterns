@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class NumberValidator {
 
     public boolean checkNegativeAndPositiveNumber(String number) {
-        Pattern pattern = Pattern.compile("\\d+\\.?\\d+");
+        Pattern pattern = Pattern.compile("\\d+\\.\\d+");
         Matcher matcher = pattern.matcher(number);
         if (matcher.matches()) {
             return true;

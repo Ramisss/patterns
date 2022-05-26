@@ -13,4 +13,7 @@ public class CustomArrayRepository {
         return CUSTOM_ARRAY_REPOSITORY;
     }
 
+    public void remove (int id) {
+//        boolean b = customArrayList.removeIf(customArray1 -> customArray1.getId() = id);
+    }
 }
